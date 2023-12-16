@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+@import url('./reset.css');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #021727;
+  color: #fff;
+}
+
+.container {
+  width: 45rem;
+  border-radius: 20px;
+  padding: 25px 20px;
+  background-color: rgb(78, 5, 5);
+}
+.container header {
+  display: flex;
+  color: #b2b2b2;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header .column span {
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.19rem;
+}
+
+.switcher {
+  position: relative; /* Alterado para relative */
+  display: flex;
+  width: 65px;
+  height: 21px;
+  background-color: #555;
+  border-radius: 50px;
+  padding: 4px;
+  justify-content: flex-start;
+}
+
+.switcher__button {
+  position: relative; /* Alterado para relative */
+  display: flex;
+  width: 25px;
+  background-color: #000;
+  border-radius: 50px;
+  justify-content: flex-end;
+  left: 0px;
+  transition: all 0.5s cubic-bezier(0.76, -0.51, 0.41, 1.42);
+}
+
+.switcher__button-before {
+  left: 30px;
+  background-color: #fff;
+  transform: translateX(125%);
+  left: 0px;
+  transition: all 0.5s cubic-bezier(0.51, -0.27, 0.52, 1.43);
+}
+
+.switcher-before {
+  background-color: #b21b1b;
+  transition: cubic-bezier(0, 1.09, 0.36, 0.34) 0.5s;;
+}
+
+.checkbox__label {
+  display: flex;
+  gap: 15px;
+}
+
+.volume-slider input {
+  accent-color: #fff;
+}
+
+.piano-keys {
+  display: flex;
+  width: 41rem;
+  margin: 20px auto auto;
+  background-color: #333;
+  border-radius: inherit;
+  justify-content: center;
+}
+
+.piano-keys .key {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  color: #a2a2a2;
+  text-transform: uppercase;
+}
+
+.piano-keys .white {
+  width: 70px;
+  height: 230px;
+  border: 1px solid black;
+  background: linear-gradient(0deg, rgb(71 71 71) 1%, rgb(255 255 255)  3%, rgb(255 255 255) 100%);
+  border-radius: 8px;
+}
+.piano-keys .black {
+  width: 44px;
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 0 0 5px 5px;
+  margin: 0 -22px 0 -22px;
+  background: rgb(32,32,33);
+  background: linear-gradient(0deg, rgba(82,82,83,1) 2%, rgba(5,5,5,1)  4%, rgba(65,65,65,1) 60%, rgba(30,30,30,1) 86%, rgba(0,0,0,1) 100%);
+  z-index: 2;
+}
+
+.piano-keys span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.13rem;
+}
+
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, .2);
+  filter: blur(0.2px);
+  transform: perspective(100px) rotateX(-3deg) translateY(6px);
+}
+.piano-keys .black.active {
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, .1);
+  background: linear-gradient(bottom, #000, #434343);
+}
+
+.piano-keys .key.hide span {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    min-height: auto;
+    flex-direction: column;
+    position: absolute;
+    background-position: center center;
+    left: 202px;
+    top: 160px;
+    align-items: center;
+    justify-content: space-between;
+  }
+.container header {
+  display: flex;
+  color: #b2b2b2;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note-input {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.note-input label {
+  font-size: 1rem;
+}
+
+.note-input input {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.note-input button {
+  padding: 8px;
+  font-size: 1rem;
+}
+  .container {
+    position: absolute;
+    align-items: stretch;
+    /* top: 200px;
+    left: -130px; */
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 23rem;
+    border-radius: 0;
+    /* padding: 2px; */
+    transform: rotate(-90deg);
+    margin: 2px 2px 2px 2px;
+    border-radius: 15px;
+  }
+
+  header .column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .piano-keys {
+    display: flex;
+    width: 37rem;
+    margin: 40px auto auto;
+    background-color: #333;
+    border-radius: inherit;
+    justify-content: center;
+  }
+
+}
+
+.container header {
+  display: flex;
+  color: #b2b2b2;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note-input {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaçamento entre os itens */
+}
+
+.note-input label {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.note-input input {
+  padding: 3px; /* Reduza o padding conforme necessário */
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.note-input button {
+  padding: 3px; /* Reduza o padding conforme necessário */
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.piano-keys .key.pressed {
+  background-color: #ff5722; /* Cor mais intensa quando a tecla está sendo pressionada */
+}
+
+.piano-keys .key {
+  transition: background-color 0.2s ease-in-out; /* Transição suave da cor de fundo */
+}
